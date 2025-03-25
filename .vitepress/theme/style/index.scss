@@ -1,0 +1,208 @@
+
+@use "sass:color";
+:root {
+  --vp-c-green: #5d80f4;
+  --vp-c-brand-dark: #5d80f4;
+  --vp-c-bg-alt: #fff; // 侧边栏
+}
+
+.dark {
+  --vp-c-bg-alt: #242424; // 深色模式侧边栏
+}
+
+.sidebar-link-item.active {
+  background: rgba(82, 179, 94, 0.1);
+}
+/* 自定义侧边栏样式 */
+.vitepress-sidebar {
+  background-color: #f4f5f7; /* 侧边栏背景色 */
+  border-right: 1px solid #e4e7ed; /* 侧边栏边框 */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.vitepress-sidebar .vp-sidebar-item {
+  font-size: 16px; /* 字体大小 */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.vitepress-sidebar .vp-sidebar-item a {
+  color: #1e293b; /* 链接颜色 */
+  text-decoration: none;
+}
+
+.vitepress-sidebar .vp-sidebar-item a:hover {
+  color: #007bff; /* 悬停时颜色 */
+  text-decoration: underline; /* 添加下划线 */
+}
+
+.vitepress-sidebar .vp-sidebar-item .vp-sidebar-item-content {
+  padding-left: 15px;
+  margin-left: 15px;
+  font-weight: normal;
+}
+
+/* 添加侧边栏折叠图标的样式 */
+.vitepress-sidebar .vp-sidebar-item[aria-expanded="true"] .vp-sidebar-item-content::before {
+  content: "▼"; /* 向下箭头 */
+  margin-right: 8px;
+}
+
+.vitepress-sidebar .vp-sidebar-item[aria-expanded="false"] .vp-sidebar-item-content::before {
+  content: "►"; /* 向右箭头 */
+  margin-right: 8px;
+}
+
+/* 使得侧边栏的背景色和边框更柔和 */
+.vitepress-sidebar .vp-sidebar-item a {
+  transition: color 0.3s ease;
+}
+
+/* 让图标和文本垂直对齐 */
+.vitepress-sidebar .vp-sidebar-item .vp-sidebar-item-content {
+  display: flex;
+  align-items: center;
+}
+
+.vitepress-sidebar .vp-sidebar-item .mdi-palette {
+  margin-right: 8px;
+}
+
+
+
+.vp-doc {
+  // 代码片段下拉菜单
+  details {
+    padding: 10px !important;
+    margin: 10px 0 !important;
+
+    summary {
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      margin: 0 !important;
+
+      &:hover {
+        transition: 0.5s;
+        color: #2d5af1;
+      }
+    }
+
+    &::before {
+      content: '' !important;
+    }
+  }
+
+  .f-dropdown {
+    ul {
+      list-style: none;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 0;
+
+    li {
+      margin-top: 0;
+    }
+  }
+
+  .f-up-load__file-list {
+    margin: 0;
+  }
+
+  ul.f-list {
+    list-style: none;
+  }
+
+  // 移除表格默认样式
+  table {
+    margin: 0;
+
+    th,
+    tr,
+    td {
+      border: none;
+      background: none;
+    }
+    tr:nth-child(2n) {
+      background: none;
+    }
+  }
+
+  // 表格
+  .vp-table__container {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      display: inline-table;
+    }
+
+    th,
+    tr:nth-child(2n) {
+      background-color: transparent;
+    }
+
+    td,
+    th {
+      text-align: center;
+      font-size: 15px;
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  p.f-text {
+    line-height: 1;
+  }
+}
+
+// 顶部 logo
+.VPNavBarTitle.has-sidebar {
+  border: none;
+}
+
+// 左侧选项链接
+.VPSidebarGroup {
+  .VPLink.link.link {
+    margin: 0;
+    padding: 5px 18px;
+    transition: 0.4s;
+    padding-left: 14px !important;
+  }
+
+  .VPLink.link.link.active {
+    background: color.adjust(#2d5af1, $lightness: 39%);
+    box-sizing: border-box;
+
+    .link-text {
+      font-weight: 600;
+    }
+  }
+}
+
+// 菜单栏
+.VPSidebar.open {
+  z-index: 99999;
+}
+
+// 滚动条
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+// 滚动滑块
+::-webkit-scrollbar-thumb {
+  background: #dddddd;
+  border-radius: 6px;
+}
+
+// 滚动条高度
+::-webkit-scrollbar {
+  height: 8px;
+  cursor: pointer;
+}
