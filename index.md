@@ -11,7 +11,7 @@ title: vitepress-demo
     快速生成高质量的图像作品。
   </p>
 
-  <a href="/docs/miaohua" class="cta-button">查看秒画文档</a>
+  <a href="./docs/miaohua" class="cta-button">查看秒画文档</a>
 </div>
 
 <style scoped>
