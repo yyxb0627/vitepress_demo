@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "serve": "vitepress build && gh-pages -d dist"
+    "serve": "vitepress build && gh-pages -d .vitepress/dist"
   },
   "license": "MIT",
   "dependencies": {
