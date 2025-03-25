@@ -9,7 +9,8 @@ import type MarkdownIt from 'markdown-it'
  * @see app-configs https://vitepress.vuejs.org/config/app-configs.html
  */
 export default {
-  title: 'vitepress-template',
+  title: 'vitepress_demo',
+  base: process.env.NODE_ENV === 'production' ? '/vitepress-demo/' : '/',  // 仅在生产环境使用 base
   /**
    * 是否显示最后更新时间
    *

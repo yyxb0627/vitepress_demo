@@ -12,6 +12,7 @@
     "vue": "^3.4.3"
   },
   "devDependencies": {
+    "@types/node": "^22.13.13",
     "fighting-design": "^0.67.1",
     "gh-pages": "^6.3.0",
     "sass": "^1.66.1",
