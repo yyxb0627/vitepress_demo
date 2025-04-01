@@ -3,10 +3,12 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "serve": "vitepress build && gh-pages -d .vitepress/dist"
+    "serve": "vitepress build && gh-pages -d .vitepress/dist",
+    "deploy": "gh-pages -d .vitepress/dist"
   },
   "license": "MIT",
   "dependencies": {
+    "crypto-browserify": "^3.12.1",
     "markdown-it": "^13.0.1",
     "vitepress": "1.0.0-rc.34",
     "vue": "^3.4.3"

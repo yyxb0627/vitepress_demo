@@ -3,11 +3,16 @@ import { sidebar } from './config/sidebar'
 import { PluginTable } from './plugin'
 import type MarkdownIt from 'markdown-it'
 
+
+
 /**
  * 更多配置项参考：
  * 
  * @see app-configs https://vitepress.vuejs.org/config/app-configs.html
  */
+
+
+
 export default {
   title: 'vitepress_demo',
   base: process.env.NODE_ENV === 'production' ? '/vitepress_demo/' : '/',  // 仅在生产环境使用 base
